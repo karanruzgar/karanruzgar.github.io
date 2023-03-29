@@ -39,7 +39,7 @@ kelimeler = {'detour': ['sapma', 'sapmak', 'dolambaçlı yol', 'varyant', 'sapt�
 'instability': ['istikrarsızlık', 'kararsızlık', 'değişkenlik', 'dayanıksız', 'dengesizlik'],
 'suffered a blow': ['darbe almak', 'vurulmak'],
 'emotional health': ['ruhsal sağlık', 'duygusal sağlık'],
-'heathy relationship': ['sağlıklı ilişki'],
+'healthy relationship': ['sağlıklı ilişki'],
 'negative feelings': ['negatif duygular', 'olumsuz duygular'],
 'positive outlook': ['olumlu görünüm', 'pozitif görünüm'],
 'quality of life': ['hayat standardı', 'yaşam kalitesi', 'hayat kalitesi'],
