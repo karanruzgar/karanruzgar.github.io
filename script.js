@@ -73,7 +73,7 @@ kelimeler = {'detour': ['sapma', 'sapmak', 'dolambaçlı yol', 'varyant', 'sapt�
 'but': ['ancak', 'fakat'],
 'so': ['bu yüzden', 'böylece', 'öyle'],
 'because': ['çünkü', 'için', 'zira'],
-'firstly': ['birinci', 'ilk önce'],
+'firstly': ['ilk olarak', 'ilk önce', 'öncelikli olarak'],
 'finally': ['nihayet', 'en sonunda', 'sonunda', 'son olarak', 'bir de'],
 'recommend': ['tavsiye etmek', 'önermek', 'tembih etmek', 'beğendirmek', 'öğüt vermek'],
 'suggest': ['önermek', 'meydana atmak', 'öne sürmek'],
