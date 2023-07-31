@@ -9,6 +9,19 @@
 <body>
     <div id="cant">Can't find the en passant? <a href='https://www.google.com/search?q=en+passant' target=”_blank”>Google en passant</a></div>
     <div id="ai" style="margin-top:10px;position: fixed;">AI that constantly insult your chess skills says: <br><span id="ai-text" style="font-weight: bold;font-size: 20px;"></span></div>
+    <div id="pc">
+        <span style="color:white">Passant coins: </span><span id="pc-c"></span><br>
+        <span>Coins per second: </span><span id="cps">0</span>
+        <div id="pc-items">
+            Beginner Chess Player - 10 Passant Coins <button id="buy" onclick="buypassant(this, 'bcp')">Buy</button><br>
+            Average Chess Player - 40 Passant Coins <button id="buy" onclick="buypassant(this, 'acp')">Buy</button><br>
+            Professional Chess Player - 60 Passant Coins <button id="buy" onclick="buypassant(this, 'pcp')">Buy</button><br>
+            chess.c*m - 150 Passant Coins <button id="buy" onclick="buypassant(this, 'cc')">Buy</button><br>
+            Gotham Chess - 200 Passant Coins <button id="buy" onclick="buypassant(this, 'gc')">Buy</button><br>
+            En Passant Factory - 1000 Passant Coins <button id="buy" onclick="buypassant(this, 'epf')">Buy</button><br>
+            Average r/AnarchyChess Enjoyer - 2000 Passant Coins <button id="buy" onclick="buypassant(this, 'aae')">Buy</button><br>
+        </div>
+    </div>
     <center><h1>En Passant Mini Game</h1></center>
     <center><h2 style="margin:0">Holy Hell</h2></center>
     <center><input type="text" placeholder="Move" id="answer"></center>
