@@ -24,7 +24,7 @@ var pos = document.getElementById("pos")
 pos.src = "enpassant/"+en[epc]+".png"
 ans=passant[epc]
 function change(){
-    if(epc==7){
+    if(epc==11){
         epc=-1
     }
     epc++
