@@ -1,5 +1,5 @@
-var en=["1","2","3","4","5","6","7","8"]
-var passant=["exf6","dxc6","gxh6","dxe6","dxe6","gxh6","dxc6","cxb6"]
+var en=["1","2","3","4","5","6","7","8","9","10","11","12"]
+var passant=["exf6","dxc6","gxh6","dxe6","dxe6","gxh6","dxc6","cxb6","dxe6","axb6","gxf6","hxg6"]
 var passantcoins = 0
 var pc = document.getElementById("pc-c")
 var cps = document.getElementById("cps")
@@ -15,7 +15,7 @@ var insults2 = [
     "This guy can't even find an en passant.",
     "You call that a move?",
     "You don't know what en passant is?",
-    "You are spending so much time on r/AnarchChess",
+    "You are spending so many time at r/AnarchChess",
     "Play some chess!"
 ]
 var epc = 0
