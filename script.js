@@ -15,7 +15,7 @@ var insults2 = [
     "This guy can't even find an en passant.",
     "You call that a move?",
     "You don't know what en passant is?",
-    "You are spending so many time at r/AnarchChess",
+    "You are spending too much time at r/AnarchChess",
     "Play some chess!"
 ]
 var epc = 0
