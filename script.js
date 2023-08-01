@@ -59,49 +59,75 @@ answer.addEventListener("keypress", function(event) {
   });
 dailypassant = 0
 function passantcoin(){
-    passantcoins+=dailypassant
+    passantcoins=parseFloat((dailypassant+passantcoins).toFixed(2))
     pc.innerHTML = passantcoins
 }
 var things={
     "bcp":{
         "f":10,
-        "g":1
+        "g":0.1,
+        "c":0
     },
     "acp":{
-        "f":40,
-        "g":2
+        "f":50,
+        "g":2,
+        "c":0
     },
     "pcp":{
-        "f":60,
-        "g":4
+        "f":600,
+        "g":10,
+        "c":0
     },
     "cc":{
-        "f":150,
-        "g":10
+        "f":2000,
+        "g":100,
+        "c":0
     },
     "gc":{
-        "f":200,
-        "g":10
+        "f":10000,
+        "g":500,
+        "c":0
     },
     "epf":{
-        "f":1000,
-        "g":50
+        "f":100000,
+        "g":1000,
+        "c":0
     },
     "aae":{
-        "f":2000,
-        "g":100
+        "f":2000000,
+        "g":20000,
+        "c":0
     }
 };
-function buypassant(that,obj){
+function buypassant(obj){
     if(passantcoins >= things[obj]["f"]){
-        passantcoins-=things[obj]["f"]
-        dailypassant+=things[obj]["g"]
-        that.disabled = true
-        that.innerHTML = "bougth"
+        passantcoins=parseFloat((passantcoins-things[obj]["f"]).toFixed(2))
+        dailypassant=parseFloat((things[obj]["g"]+dailypassant).toFixed(2))
+        things[obj]["f"]=Math.round(((things[obj]["f"]/10)+things[obj]["f"])*100)/100
+        things[obj]["c"]+=1
+        document.getElementById(obj+"-p").innerHTML = things[obj]["f"]
+        document.getElementById(obj+"-n").innerHTML = things[obj]["c"]
         pc.innerHTML = passantcoins
         cps.innerHTML = dailypassant
     }
-    
-    
 }
 setInterval(passantcoin,1000)
+function exportSave(){
+    save = `${JSON.stringify(things)}!!${passantcoins}!!${dailypassant}`
+    document.getElementById("save").value = btoa(save)
+}
+function importSave(){
+    save = atob(document.getElementById("save").value)
+    
+    things=JSON.parse(save.split("!!")[0])
+    passantcoins = parseFloat(save.split("!!")[1])
+    dailypassant = parseFloat(save.split("!!")[2])
+    for(i in Object.keys(things)){
+        let keys = Object.keys(things)
+        document.getElementById(keys[i]+"-p").innerHTML = things[keys[i]]["f"]
+        document.getElementById(keys[i]+"-n").innerHTML = things[keys[i]]["c"]
+    }
+    pc.innerHTML = passantcoins
+    cps.innerHTML = dailypassant
+
+}

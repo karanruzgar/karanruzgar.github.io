@@ -35,7 +35,7 @@ body {
   background-color: black;
   color:white;
   border-radius: 5px;
-  width: 30vw;
+  width: 32vw;
   position: fixed;
   font-size: 1vw;
 }
@@ -45,4 +45,20 @@ body {
 }
 #cps{
   color:greenyellow
+}
+.price{
+  color:blue;
+}
+#pc-items{
+  color:aquamarine;
+}
+.price-text{
+  color:white;
+}
+.buy{
+  height: 2vw;
+  font-size: 1vw;
+}
+.count{
+  margin-left:10px;
 }
