@@ -62,3 +62,8 @@ body {
 .count{
   margin-left:10px;
 }
+#forgotten{
+  position: fixed;
+  width: 30vw;
+  bottom:0px;
+}
