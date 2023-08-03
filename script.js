@@ -131,3 +131,8 @@ function importSave(){
     cps.innerHTML = dailypassant
 
 }
+function rollnumber(){
+    nums = [133,134]
+    document.getElementById("rn").innerHTML = nums[Math.floor(Math.random()*2)]
+}
+rollnumber()
