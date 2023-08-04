@@ -35,7 +35,7 @@ function control(){
     answer = document.getElementById("answer")
     state = document.getElementById("state")
     console.log(ans)
-    if (answer.value == ans || answer.value == ans.substr(0,4)){
+    if (answer.value == ans || answer.value == ans.substr(0,4) || answer.value.includes(ans.substr(0,4))){
         state.innerHTML = "True"
         state.style.color = "green"
         document.getElementById("ai-text").innerHTML = insults1[(Math.floor(Math.random() * insults1.length))]
