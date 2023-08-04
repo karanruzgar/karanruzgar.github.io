@@ -28,7 +28,7 @@ function change(){
         epc=-1
     }
     epc++
-    pos.src = "enpassant/"+en[epc]+".png"
+    pos.src = "../ilvaticanos/"+en[epc]+".png"
     ans=passant[epc]
 }
 function control(){
