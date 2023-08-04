@@ -7,7 +7,7 @@ var insults1 = [
     "Do you think you play well?",
     "Stop watching levy.",
     "The only thing you can make is finding il vaticanos.",
-    "You call that an il vaticano? More like an en peasant!",
+    "You call that an il vaticano? More like an il vanicato!",
     "wtf was that il vaticano",
     "That was the worst il vaticano I've ever seen"
 ]
