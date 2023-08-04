@@ -24,7 +24,7 @@ var pos = document.getElementById("pos")
 pos.src = "../knightboosts/"+en[epc]+".png"
 ans=passant[epc]
 function change(){
-    if(epc==11){
+    if(epc==3){
         epc=-1
     }
     epc++
