@@ -1,52 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Passant</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="cant">Can't find the en passant? <a href='https://www.google.com/search?q=en+passant' target=”_blank”>Google en passant</a></div>
-    <div id="ai" style="margin-top:10px;position: fixed;">AI that constantly insult your chess skills says: <br><span id="ai-text" style="font-weight: bold;font-size: 20px;"></span></div>
-    <img src="anarchy.webp" alt="whatt" style="position: fixed; margin-top:200px;width: 30vw;margin: left 5vw;">
-    <div id="forgotten">
-        <span><b>Forgotten Chess Moves: Il Vaticano and Knight Boosting</b></span><br><br>
-        <span><b>Il Vaticano: </b>Enemy pawns sandwiched by bishops can be captured by swaping the positions of bishops. Notation: B-o-o-B</span><br><br>
-        <span><b>Knight Boosting: </b>When a pawn is promoted to a knight, the knight can immediately move. Enemy king can't walk into knight boost. Notation: f8=Ng6</span><br><br>
-    </div>
-    <div id="random" style="right:0;position:fixed;margin-right: 5vw;">Random Number Generator: <span id="rn" style="font-weight: bold;margin-right: 5px;"></span><button onclick="rollnumber()">Roll Again</button></div>
-    <div id="pc">
-        <span style="color:white">Passant coins: </span><span id="pc-c"></span><br>
-        <span>Coins per second: </span><span id="cps">0</span>
-        <div id="pc-items">
-            <div>Beginner Chess Player-<span id="bcp-p" class="price">10</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('bcp')">Buy</button><span class="count" id="bcp-n">0</span></div><br>
-            <div>Average Chess Player-<span id="acp-p" class="price">50</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('acp')">Buy</button><span class="count" id="acp-n">0</span></div><br>
-            <div>Professional Chess Player-<span id="pcp-p" class="price">600</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('pcp')">Buy</button><span class="count" id="pcp-n">0</span></div><br>
-            <div>chess.c*m-<span id="cc-p" class="price">2000</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('cc')">Buy</button><span class="count" id="cc-n">0</span></div><br>
-            <div>Gotham Chess-<span id="gc-p" class="price">10000</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('gc')">Buy</button><span class="count" id="gc-n">0</span></div><br>
-            <div>En Passant Factory-<span id="epf-p" class="price">100000</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('epf')">Buy</button><span class="count" id="epf-n">0</span></div><br>
-            <div>Average r/AnarchyChess Enjoyer-<span id="aae-p" class="price">2000000</span> <span class="price-text">Passant Coins</span> <button class="buy" onclick="buypassant('aae')">Buy</button><span class="count" id="aae-n">0</span></div><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New website just dropped!</title>
+  </head>
+  <body style="font-family: Arial;background-color: black;">
+    <center style="margin-top: 15vw;"><a href="./passant"><h1>En Passant Mini Game</h1></a><br><a href="./kboost"><h1>Knight Boost Mini Game</h1></a><br><a href="./vaticano"><h1>Il Vaticano Mini Game</h1></a></center>
 
-        </div>
-        <button onclick="exportSave()">Export Save</button><button onclick="importSave()">Import Save</button><input type="text" id="save" placeholder="Put your save code here">
-    </div>
-    <center><h1>En Passant Mini Game</h1></center>
-    <center><h2 style="margin:0">Holy Hell</h2></center>
-    <center><input type="text" placeholder="Move" id="answer"></center>
-    <center><input type="button" id="submit" value="Submit" onclick="control()"></center>
-    
-    <center><img src="" alt="En Passant" id="pos"></center>
-    <center><div id="state" style="font-size: 20px;"></div></center>
+
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3MXTZSTZTY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3MXTZSTZTY"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-3MXTZSTZTY');
-</script>
-    <script src="script.js"></script>
-</body>
+      gtag("config", "G-3MXTZSTZTY");
+    </script>
+  </body>
 </html>
