@@ -136,3 +136,6 @@ function rollnumber(){
     document.getElementById("rn").innerHTML = nums[Math.floor(Math.random()*2)]
 }
 rollnumber()
+function martinHug(){
+    alert("Martin hugged you.")
+}
