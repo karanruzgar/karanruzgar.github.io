@@ -3,6 +3,8 @@ var passant=["exf6","dxc6","gxh6","dxe6","dxe6","gxh6","dxc6","cxb6","dxe6","axb
 var passantcoins = 0
 var pc = document.getElementById("pc-c")
 var cps = document.getElementById("cps")
+var music = document.getElementById("music")
+music.style.display = "none"
 var insults1 = [
     "Do you think you play well?",
     "Stop watching levy.",
@@ -36,6 +38,8 @@ function control(){
     state = document.getElementById("state")
     console.log(ans)
     if (answer.value.toLowerCase() == ans || answer.value.toLowerCase() == ans.split("x")[1]){
+        document.getElementsByTagName("body")[0].onclick=""
+        music.style.display = "block"
         state.innerHTML = "True"
         state.style.color = "green"
         document.getElementById("ai-text").innerHTML = insults1[(Math.floor(Math.random() * insults1.length))]

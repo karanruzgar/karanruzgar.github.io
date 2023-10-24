@@ -73,3 +73,8 @@ body {
   position: absolute;
   top:6vw
 }
+#music{
+  position: absolute;
+  right: 0;
+  margin-top: 5vw;
+}
