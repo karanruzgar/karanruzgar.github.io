@@ -78,4 +78,17 @@ function rollnumber(){
     nums = [133,134]
     document.getElementById("rn").innerHTML = nums[Math.floor(Math.random()*2)]
 }
+function lucky(){
+    let random = Math.floor(Math.random()*100000)
+    if(random == 29009){
+        window.location.href = "https://www.google.com/search?q=il+vaticano"
+    }
+    else if(random == 69169){
+        window.location.href = "https://www.google.com/search?q=knight+boosting"
+    }
+    else{
+        window.location.href = "https://www.google.com/search?q=en+passant"
+    }
+    console.log(random)
+}
 rollnumber()

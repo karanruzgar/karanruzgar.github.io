@@ -67,3 +67,21 @@ body {
   width: 30vw;
   bottom:0px;
 }
+#imfeeling{
+  width: 216px;
+  height: 36px;
+  font-family:arial;
+  font-size:14px;
+  line-height:27px;
+  padding:0px 16px;
+  text-align:center;
+  background-color: #f9f9fb;
+  color:#3c4043;
+  border-radius: 4px;
+  box-shadow:#000000 0px 0px 0px 0px;
+  border:0px;
+  align-items:flex-start;
+}
+#imfeeling:hover{
+  border: 2px solid black;
+}
