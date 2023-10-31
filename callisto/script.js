@@ -92,3 +92,27 @@ function lucky(){
     console.log(random)
 }
 rollnumber()
+const firebaseConfig = {
+    apiKey: "AIzaSyCO87bH4Ioe9-M_s11eYagQh2DZn3WzqBo",
+    authDomain: "anarchychesss.firebaseapp.com",
+    projectId: "anarchychesss",
+    storageBucket: "anarchychesss.appspot.com",
+    messagingSenderId: "231915906952",
+    appId: "1:231915906952:web:3bfee953a5e0ec95b67c3d"
+};
+const app = firebase.initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+const database = firebase.database(app);
+const dbRef = database.ref();
+function addrice(){
+    dbRef.child(`clicks/`).get().then((snapshot) => {
+        database.ref('clicks/').set({
+    clicks:parseInt(snapshot.val()["clicks"])+1,
+    });
+    document.getElementById("rices").innerHTML = snapshot.val()["clicks"]
+    }).catch((error) => {
+    console.error(error);
+    });
+}

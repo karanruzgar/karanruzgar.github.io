@@ -13,6 +13,7 @@
     <a href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response">Click to have the best night of your life</a><br>
     <img src="news.png" alt="news" style="width: 300px;bottom: 0;position: absolute;">
     <div id="random" style="right:0;position:fixed;margin-right: 5vw;">Random Number Generator: <span id="rn" style="font-weight: bold;margin-right: 5px;"></span><button onclick="rollnumber()">Roll Again</button></div>
+    <div>rices:<span id="rices">0</span></div>
     <div id="pc">
         <span style="color:white">Callisto coins: </span><span id="pc-c"></span><br>
         <span>Coins per second: </span><span id="cps">0</span>
@@ -29,8 +30,47 @@
     <center><h2 style="margin:0">Holy Jupiter</h2></center>
 
     
-    <center><img src="calisto.png" alt="callisto" id="pos" onclick="calisto()"></center>
+    <center><img src="calisto.png" alt="callisto" id="pos" onclick="calisto();addrice()"></center>
     <center><div id="state" style="font-size: 20px;"></div></center>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js'
+    
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js'
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyCO87bH4Ioe9-M_s11eYagQh2DZn3WzqBo",
+        authDomain: "anarchychesss.firebaseapp.com",
+        projectId: "anarchychesss",
+        storageBucket: "anarchychesss.appspot.com",
+        messagingSenderId: "231915906952",
+        appId: "1:231915906952:web:3bfee953a5e0ec95b67c3d"
+    };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
+const dbRef = ref(database);
+function addrice(){
+    get(child(dbRef, `clicks/`)).then((snapshot) => {
+    set(ref(database, 'clicks/'), {
+    clicks:parseInt(snapshot.val()["clicks"])+1,
+    });
+    
+    }).catch((error) => {
+    console.error(error);
+    });
+}
+      </script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MXTZSTZTY"></script>
 <script>
