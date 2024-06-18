@@ -1,5 +1,6 @@
 var en=["1","2","3","4","5","6","7","8","9","10","11","12"]
 var passant=["exf6","dxc6","gxh6","dxe6","dxe6","gxh6","dxc6","cxb6","dxe6","axb6","gxf6","hxg6"]
+var bgs = {"martin":3000,"horsey":10000,"brown":99999999999}
 var passantcoins = 0
 var pc = document.getElementById("pc-c")
 var cps = document.getElementById("cps")
@@ -142,4 +143,14 @@ function rollnumber(){
 rollnumber()
 function martinHug(){
     alert("Martin hugged you.")
+}
+function buybg(bg){
+    if(passantcoins>bgs[bg]){
+        passantcoins = passantcoins-bgs[bg]
+        document.getElementsByTagName("body")[0].style.backgroundImage = "url("+bg+".jpeg)"
+    }
+    else{
+        alert("you need "+String(bgs[bg])+" passant coins kiddo")
+        
+    }
 }

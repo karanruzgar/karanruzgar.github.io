@@ -78,3 +78,19 @@ body {
   right: 0;
   margin-top: 5vw;
 }
+#bgshop{
+  right: 2vw;
+  top: 5vw;
+  position: fixed;
+  width: 32vw;
+  background-color: blue;
+  height: 16vw;
+}
+.bgshop-image{
+  width: 7vw;
+  height: 7vw;
+  margin-left: 3vw;
+}
+.bgshop-image:hover{
+  border: 2px solid black;
+}
