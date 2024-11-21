@@ -11,7 +11,6 @@ function play(){
     if(kelimeler[soru].toLowerCase().includes(cevap)){
         document.getElementById("info").style = "color:green";
         document.getElementById("info").innerHTML = "Doğru!<br>"+soru+": <b>"+kelimeler[soru]+"</b>";
-        dogrusayisi+=1
     }
     else{
         document.getElementById("info").style = "color:red";
@@ -19,6 +18,7 @@ function play(){
     };
     soru = Object.keys(kelimeler)[Math.floor(Math.random() * Object.keys(kelimeler).length)];
     kelime.innerHTML = soru;
+    dogrusayisi+=1
     if(dogrusayisi>=2){
       window.location.href = "https://a9fm.github.io/lightshot"
     }
