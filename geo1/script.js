@@ -8,15 +8,6 @@ function play(){
     cevap = document.getElementById("cvp").value.toLowerCase();
     document.getElementById("cvp").value = "";
     document.getElementById("cvp").focus()
-    if(cevap == "brokoli"){
-      alert("yeşimooo")
-    }
-    if(cevap == "yemci"){
-      alert("derya")
-    }
-    if(cevap == "mero"){
-      alert("merhem")
-    }
     if(kelimeler[soru].toLowerCase().includes(cevap) && cevap.length >2){
         document.getElementById("info").style = "color:green";
         document.getElementById("info").innerHTML = "Doğru!<br>"+soru+": <b>"+kelimeler[soru]+"</b>";
