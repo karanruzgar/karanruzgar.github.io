@@ -1,2 +1,2 @@
 start the process
-echo hi
+start brave
